@@ -1,36 +1,52 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="KingdomLegacyCompanion.MainPage">
+             x:Class="KingdomLegacyCompanion.Pages.MainPage"
+             BackgroundColor="{StaticResource Primary}"
+             Shell.NavBarIsVisible="False">
 
-    <ScrollView>
-        <VerticalStackLayout
-            Padding="30,0"
-            Spacing="25">
-            <Image
-                Source="dotnet_bot.png"
-                HeightRequest="185"
-                Aspect="AspectFit"
-                SemanticProperties.Description="dot net bot in a race car number eight" />
+    <VerticalStackLayout Spacing="25" Padding="30">
+        <BoxView Color="Transparent"
+                 HeightRequest="10" />
+        <Label Text="Kingdom Legacy Companion" 
+               FontSize="32"
+               FontFamily="LibreBaskervilleRegular"
+               TextColor="White"
+               HorizontalOptions="Center"
+               VerticalOptions="Start" />
+        <BoxView Color="Transparent"
+                 HeightRequest="20" />
+        <Grid HorizontalOptions="Center">
+            <Image Source="button.jpg" 
+                   Aspect="Center"
+                   />
+            <Button Text="New Kingdom"
+                    Clicked="NewGameClicked"
+                    FontSize="20"
+                    FontFamily="LibreBaskervilleRegular"
+                    TextColor="White"
+                    BackgroundColor="Transparent"/>
+        </Grid>
 
-            <Label
-                Text="Hello, World!"
-                Style="{StaticResource Headline}"
-                SemanticProperties.HeadingLevel="Level1" />
+        <Grid HorizontalOptions="Center">
+            <Image Source="button.jpg" 
+                   Aspect="Center"/>
+            <Button Text="Resume a game"
+                    FontSize="20"
+                    FontFamily="LibreBaskervilleRegular"
+                    TextColor="White"
+                    BackgroundColor="Transparent"/>
+        </Grid>
 
-            <Label
-                Text="Welcome to &#10;.NET Multi-platform App UI"
-                Style="{StaticResource SubHeadline}"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I" />
-
-            <Button
-                x:Name="CounterBtn"
-                Text="Click me" 
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCounterClicked"
-                HorizontalOptions="Fill" />
-        </VerticalStackLayout>
-    </ScrollView>
-
+        <Grid HorizontalOptions="Center">
+            <Image Source="button.jpg" 
+                   Aspect="Center"/>
+            <Button 
+                    Text="High Score"
+                    FontSize="20"
+                    FontFamily="LibreBaskervilleRegular"
+                    TextColor="White"
+                    BackgroundColor="Transparent"/>
+        </Grid>
+    </VerticalStackLayout>
 </ContentPage>

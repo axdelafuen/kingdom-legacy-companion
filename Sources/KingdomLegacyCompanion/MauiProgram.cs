@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using CommunityToolkit.Maui;
+using Microsoft.Extensions.Logging;
 
 namespace KingdomLegacyCompanion
 {
@@ -13,7 +14,13 @@ namespace KingdomLegacyCompanion
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
-                });
+                    fonts.AddFont("LibreBaskerville-Regular.ttf", "LibreBaskervilleRegular");
+                })
+                .UseMauiApp<App>().ConfigureEssentials(essentials =>
+                {
+                    essentials.UseVersionTracking();
+                })
+                .UseMauiCommunityToolkit();
 
 #if DEBUG
     		builder.Logging.AddDebug();

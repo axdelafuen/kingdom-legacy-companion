@@ -1,4 +1,4 @@
-﻿namespace KingdomLegacyCompanion
+﻿    namespace KingdomLegacyCompanion
 {
     public partial class App : Application
     {
