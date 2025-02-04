@@ -80,10 +80,22 @@
 	  <Compile Update="Pages\GamePage.xaml.cs">
 	    <DependentUpon>GamePage.xaml</DependentUpon>
 	  </Compile>
+	  <Compile Update="Pages\LoadPage.xaml.cs">
+	    <DependentUpon>LoadPage.xaml</DependentUpon>
+	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
 	  <MauiXaml Update="Pages\GamePage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\LoadPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\ScorePage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\SettingsPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

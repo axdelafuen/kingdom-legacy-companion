@@ -4,6 +4,7 @@ namespace Model
 {
     public class Game : INotifyPropertyChanged
     {
+        private static int _uniqueId = 0;
         private readonly int _id;
         private string _name;
         private Resource _gold;
@@ -12,12 +13,15 @@ namespace Model
         private Resource _steel;
         private Resource _sword;
         private Resource _tradegoods;
+        private bool _isEnded;
+        private int _score;
 
         public event PropertyChangedEventHandler? PropertyChanged;
 
         public Game(string? name)
         {
-            _id = 0;
+            _id = _uniqueId;
+            _uniqueId++;
             _name = name ?? "Kingdom#"+_id;
             _gold = new Resource(ResourceType.Gold);
             _wood = new Resource(ResourceType.Wood);
@@ -25,12 +29,20 @@ namespace Model
             _steel = new Resource(ResourceType.Steel);
             _sword = new Resource(ResourceType.Sword);
             _tradegoods = new Resource(ResourceType.TradeGoods);
+            _isEnded = false;
+            _score = -1;
         }
 
         public int Id 
         { 
             get { return _id; } 
         }
+
+        public static int UniqueId
+        {
+            get { return _uniqueId; }
+        }
+
         public string Name 
         {
             get { return _name; }
@@ -65,6 +77,23 @@ namespace Model
         {
             get { return _tradegoods.Value; }
             set { _tradegoods.Value = value; OnPropertyChanged(nameof(TradeGoods)); }
+        }
+
+        public bool IsEnded
+        {
+            get { return _isEnded; }
+            set { _isEnded = value; OnPropertyChanged(nameof(IsEnded));}
+        }
+
+        public int Score
+        {
+            get { if (_isEnded) return _score; else return -1; }
+            set { if (_isEnded) _score = value; OnPropertyChanged(nameof(Score));}
+        }
+
+        public static void RestoreUniqueId(int value)
+        {
+            _uniqueId = value;
         }
 
         protected void OnPropertyChanged(string propertyName) =>

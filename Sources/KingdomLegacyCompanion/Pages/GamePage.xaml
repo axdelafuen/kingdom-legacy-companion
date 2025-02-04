@@ -6,14 +6,262 @@
              BackgroundColor="{StaticResource Primary}"
              Shell.NavBarIsVisible="False"
              >
+    <Grid>
+        <VerticalStackLayout Spacing="15" Padding="30">
+            <BoxView Color="Transparent"
+                HeightRequest="40" />
+            <Label 
+                Text="{Binding Name}"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" 
+                FontSize="32"
+                FontFamily="LibreBaskervilleRegular"
+                TextColor="White"/>
+            <BoxView Color="Transparent" HeightRequest="10" />
+            <!--GOLD-->
+            <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+                <Button 
+                    AutomationId="gold"
+                    Text="—"
+                    Clicked="SubValueToResource"
+                    WidthRequest="50"
+                    HeightRequest="50"
+                    CornerRadius="25"
+                    BackgroundColor="White"
+                    TextColor="Black"
+                    FontSize="20"
+                    FontAttributes="Bold"
+                    BorderColor="Black"
+                    BorderWidth="2"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"/>
+                <Label  Text="{Binding Gold}" FontSize="30" VerticalOptions="Center" FontFamily="LibreBaskervilleRegular" TextColor="White"/>
+                <Image Source="money.png" WidthRequest="45" HeightRequest="45"/>
+                <Button 
+                    AutomationId="gold"
+                    Text="+"
+                    Clicked="AddValueToResource"
+                    WidthRequest="50"
+                    HeightRequest="50"
+                    CornerRadius="25"
+                    BackgroundColor="White"
+                    TextColor="Black"
+                    FontSize="20"
+                    FontAttributes="Bold"
+                    BorderColor="Black"
+                    BorderWidth="2"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"/>
+            </HorizontalStackLayout>
+            <!--WOOD-->
+            <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+                <Button 
+                    AutomationId="wood"
+                    Text="—"
+                    Clicked="SubValueToResource"
+                    WidthRequest="50"
+                    HeightRequest="50"
+                    CornerRadius="25"
+                    BackgroundColor="White"
+                    TextColor="Black"
+                    FontSize="20"
+                    FontAttributes="Bold"
+                    BorderColor="Black"
+                    BorderWidth="2"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"/>  
+                <Label  Text="{Binding Wood}" FontSize="30" VerticalOptions="Center" FontFamily="LibreBaskervilleRegular" TextColor="White"/>
+                <Image Source="wood.png" WidthRequest="45" HeightRequest="45"/>
+                <Button 
+                    AutomationId="wood"
+                    Text="+"
+                    Clicked="AddValueToResource"
+                    WidthRequest="50"
+                    HeightRequest="50"
+                    CornerRadius="25"
+                    BackgroundColor="White"
+                    TextColor="Black"
+                    FontSize="20"
+                    FontAttributes="Bold"
+                    BorderColor="Black"
+                    BorderWidth="2"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"/>
+            </HorizontalStackLayout>
+            <!--STONE-->
+            <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+                <Button 
+                    AutomationId="stone"
+                    Text="—"
+                    Clicked="SubValueToResource"
+                    WidthRequest="50"
+                    HeightRequest="50"
+                    CornerRadius="25"
+                    BackgroundColor="White"
+                    TextColor="Black"
+                    FontSize="20"
+                    FontAttributes="Bold"
+                    BorderColor="Black"
+                    BorderWidth="2"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"/>
+                <Label  Text="{Binding Stone}" FontSize="30" VerticalOptions="Center" FontFamily="LibreBaskervilleRegular" TextColor="White"/>
+                <Image Source="stone.png" WidthRequest="45" HeightRequest="45"/>
+                <Button 
+                    AutomationId="stone"
+                    Text="+"
+                    Clicked="AddValueToResource"
+                    WidthRequest="50"
+                    HeightRequest="50"
+                    CornerRadius="25"
+                    BackgroundColor="White"
+                    TextColor="Black"
+                    FontSize="20"
+                    FontAttributes="Bold"
+                    BorderColor="Black"
+                    BorderWidth="2"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"/>
+            </HorizontalStackLayout>
+            <!--STEEL-->
+            <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+                <Button 
+                    AutomationId="steel"
+                    Text="—"
+                    Clicked="SubValueToResource"
+                    WidthRequest="50"
+                    HeightRequest="50"
+                    CornerRadius="25"
+                    BackgroundColor="White"
+                    TextColor="Black"
+                    FontSize="20"
+                    FontAttributes="Bold"
+                    BorderColor="Black"
+                    BorderWidth="2"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"/>
+                <Label  Text="{Binding Steel}" FontSize="30" VerticalOptions="Center" FontFamily="LibreBaskervilleRegular" TextColor="White"/>
+                <Image Source="steel.png" WidthRequest="45" HeightRequest="45"/>
+                <Button 
+                    AutomationId="steel"
+                    Text="+"
+                    Clicked="AddValueToResource"
+                    WidthRequest="50"
+                    HeightRequest="50"
+                    CornerRadius="25"
+                    BackgroundColor="White"
+                    TextColor="Black"
+                    FontSize="20"
+                    FontAttributes="Bold"
+                    BorderColor="Black"
+                    BorderWidth="2"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"/>
+            </HorizontalStackLayout>
+            <!--SWORD-->
+            <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+                <Button 
+                    AutomationId="sword"
+                    Text="—"
+                    Clicked="SubValueToResource"
+                    WidthRequest="50"
+                    HeightRequest="50"
+                    CornerRadius="25"
+                    BackgroundColor="White"
+                    TextColor="Black"
+                    FontSize="20"
+                    FontAttributes="Bold"
+                    BorderColor="Black"
+                    BorderWidth="2"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"/>
+                <Label  Text="{Binding Sword}" FontSize="30" VerticalOptions="Center" FontFamily="LibreBaskervilleRegular" TextColor="White"/>
+                <Image Source="sword.png" WidthRequest="45" HeightRequest="45"/>
+                <Button 
+                    AutomationId="sword"
+                    Text="+"
+                    Clicked="AddValueToResource"
+                    WidthRequest="50"
+                    HeightRequest="50"
+                    CornerRadius="25"
+                    BackgroundColor="White"
+                    TextColor="Black"
+                    FontSize="20"
+                    FontAttributes="Bold"
+                    BorderColor="Black"
+                    BorderWidth="2"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"/>
+            </HorizontalStackLayout>
+            <!--TRADEGOODS-->
+            <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+                <Button 
+                    AutomationId="tradegoods"
+                    Text="—"
+                    Clicked="SubValueToResource"
+                    WidthRequest="50"
+                    HeightRequest="50"
+                    CornerRadius="25"
+                    BackgroundColor="White"
+                    TextColor="Black"
+                    FontSize="20"
+                    FontAttributes="Bold"
+                    BorderColor="Black"
+                    BorderWidth="2"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"/>
+                <Label  Text="{Binding TradeGoods}" FontSize="30" VerticalOptions="Center" FontFamily="LibreBaskervilleRegular" TextColor="White"/>
+                <Image Source="tradegoods.png" WidthRequest="45" HeightRequest="45"/>
+                <Button 
+                    AutomationId="tradegoods"
+                    Text="+"
+                    Clicked="AddValueToResource"
+                    WidthRequest="50"
+                    HeightRequest="50"
+                    CornerRadius="25"
+                    BackgroundColor="White"
+                    TextColor="Black"
+                    FontSize="20"
+                    FontAttributes="Bold"
+                    BorderColor="Black"
+                    BorderWidth="2"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"/>
+            </HorizontalStackLayout>
 
-    <VerticalStackLayout Spacing="25" Padding="30">
-        <Label 
-            Text="{Binding Name}"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" 
-            FontSize="32"
-            FontFamily="LibreBaskervilleRegular"
-            TextColor="White"/>     
-    </VerticalStackLayout>
+            <BoxView Color="Transparent" HeightRequest="30" />
+            <Grid HorizontalOptions="Center">
+                <Image Source="button.jpg" 
+                   Aspect="Center"
+                   />
+                <Button Text="Seal the Legacy"
+                    Clicked="EndGameClicked"
+                    FontSize="20"
+                    FontFamily="LibreBaskervilleRegular"
+                    TextColor="White"
+                    BackgroundColor="Transparent"/>
+            </Grid>
+        </VerticalStackLayout>
+        <Button 
+            Clicked="GoBackMainPage"
+            WidthRequest="50"
+            HeightRequest="50"
+            CornerRadius="25"
+            BackgroundColor="Transparent"
+            FontSize="25"
+            FontAttributes="Bold"
+            BorderColor="White"
+            BorderWidth="2"
+            HorizontalOptions="Start"
+            VerticalOptions="Start"
+            Margin="10"
+        >
+            <Button.ImageSource>
+                <FontImageSource FontFamily="FluentIcons"
+                         Glyph="&#xe830;"
+                         Color="White"
+                         />
+            </Button.ImageSource>
+        </Button>
+    </Grid>
 </ContentPage>

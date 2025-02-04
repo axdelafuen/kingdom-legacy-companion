@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="KingdomLegacyCompanion.Pages.ScorePage"
+             BackgroundColor="{StaticResource Primary}"
+             Shell.NavBarIsVisible="False"
+             Title="ScorePage">
+
+    <Grid>
+        <ScrollView>
+            <VerticalStackLayout x:Name="LabelContainer" Spacing="15" Padding="20">
+                <BoxView Color="Transparent"
+                    HeightRequest="50" />
+                <Label 
+                Text="Best Kingdoms !"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" 
+                FontSize="32"
+                FontFamily="LibreBaskervilleRegular"
+                TextColor="White"/>
+                <BoxView Color="Transparent" HeightRequest="10" />
+            </VerticalStackLayout>
+        </ScrollView>
+        <Button 
+        Clicked="GoBackMainPage"
+        WidthRequest="50"
+        HeightRequest="50"
+        CornerRadius="25"
+        BackgroundColor="Transparent"
+        FontSize="25"
+        FontAttributes="Bold"
+        BorderColor="White"
+        BorderWidth="2"
+        HorizontalOptions="Start"
+        VerticalOptions="Start"
+        Margin="10">
+            <Button.ImageSource>
+                <FontImageSource FontFamily="FluentIcons" Glyph="&#xe830;" Color="White"/>
+            </Button.ImageSource>
+        </Button>
+    </Grid>
+</ContentPage>

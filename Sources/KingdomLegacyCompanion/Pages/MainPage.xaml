@@ -5,48 +5,68 @@
              BackgroundColor="{StaticResource Primary}"
              Shell.NavBarIsVisible="False">
 
-    <VerticalStackLayout Spacing="25" Padding="30">
-        <BoxView Color="Transparent"
-                 HeightRequest="10" />
-        <Label Text="Kingdom Legacy Companion" 
-               FontSize="32"
-               FontFamily="LibreBaskervilleRegular"
-               TextColor="White"
-               HorizontalOptions="Center"
-               VerticalOptions="Start" />
-        <BoxView Color="Transparent"
-                 HeightRequest="20" />
-        <Grid HorizontalOptions="Center">
-            <Image Source="button.jpg" 
-                   Aspect="Center"
-                   />
-            <Button Text="New Kingdom"
-                    Clicked="NewGameClicked"
-                    FontSize="20"
-                    FontFamily="LibreBaskervilleRegular"
-                    TextColor="White"
-                    BackgroundColor="Transparent"/>
-        </Grid>
+    <Grid>
+        <VerticalStackLayout Spacing="25" Padding="30">
+            <BoxView Color="Transparent"
+                     HeightRequest="10" />
+            <Label Text="Kingdom Legacy Companion" 
+                   FontSize="32"
+                   FontFamily="LibreBaskervilleRegular"
+                   TextColor="White"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Start" />
+            <BoxView Color="Transparent"
+                     HeightRequest="20" />
+            <Grid HorizontalOptions="Center">
+                <Image Source="button.jpg" 
+                       Aspect="Center"
+                       />
+                <Button Text="New Kingdom"
+                        Clicked="NewGameClicked"
+                        FontSize="20"
+                        FontFamily="LibreBaskervilleRegular"
+                        TextColor="White"
+                        BackgroundColor="Transparent"/>
+            </Grid>
 
-        <Grid HorizontalOptions="Center">
-            <Image Source="button.jpg" 
-                   Aspect="Center"/>
-            <Button Text="Resume a game"
-                    FontSize="20"
-                    FontFamily="LibreBaskervilleRegular"
-                    TextColor="White"
-                    BackgroundColor="Transparent"/>
-        </Grid>
+            <Grid HorizontalOptions="Center">
+                <Image Source="button.jpg" 
+                       Aspect="Center"/>
+                <Button Text="Resume a game"
+                        Clicked="LoadGameClicked"
+                        FontSize="20"
+                        FontFamily="LibreBaskervilleRegular"
+                        TextColor="White"
+                        BackgroundColor="Transparent"/>
+            </Grid>
 
-        <Grid HorizontalOptions="Center">
-            <Image Source="button.jpg" 
-                   Aspect="Center"/>
-            <Button 
-                    Text="High Score"
-                    FontSize="20"
-                    FontFamily="LibreBaskervilleRegular"
-                    TextColor="White"
-                    BackgroundColor="Transparent"/>
-        </Grid>
-    </VerticalStackLayout>
+            <Grid HorizontalOptions="Center">
+                <Image Source="button.jpg" 
+                       Aspect="Center"/>
+                <Button 
+                        Text="High Score"
+                        Clicked="CheckHistoryClicked"
+                        FontSize="20"
+                        FontFamily="LibreBaskervilleRegular"
+                        TextColor="White"
+                        BackgroundColor="Transparent"/>
+            </Grid>
+        </VerticalStackLayout>
+        <Button
+            Clicked="GoToSettingsPage"
+            WidthRequest="50"
+            HeightRequest="50"
+            CornerRadius="25"
+            BackgroundColor="Transparent"
+            FontAttributes="Bold"
+            BorderColor="White"
+            BorderWidth="2"
+            HorizontalOptions="End"
+            VerticalOptions="Start"
+            Margin="10">
+            <Button.ImageSource>
+                <FontImageSource Size="20"  FontFamily="FluentIcons" Glyph="&#xe713;" Color="White"/>
+            </Button.ImageSource>
+        </Button>
+    </Grid>
 </ContentPage>
