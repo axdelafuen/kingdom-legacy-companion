@@ -6,20 +6,41 @@
              BackgroundColor="{StaticResource Primary}"
              Shell.NavBarIsVisible="False">
     <Grid>
-        <VerticalStackLayout Spacing="15" Padding="30">
-            <Label 
-            Text="Settings"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" 
-            FontSize="32"
-            FontFamily="LibreBaskervilleRegular"
-            TextColor="White"/>
-            <Button
-                Text="Clear app data"
-                Clicked="ClearAppData"
-                />
+        <ScrollView>
+            <VerticalStackLayout Spacing="15" Padding="30">
+                <Label 
+                Text="Settings"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" 
+                FontSize="32"
+                FontFamily="LibreBaskervilleRegular"
+                TextColor="White"/>
 
-        </VerticalStackLayout>
+                <BoxView Color="Transparent"
+             HeightRequest="20" />
+
+                <Grid HorizontalOptions="Center">
+                    <Image Source="button_pressed.jpg" 
+                        Aspect="Center"/>
+                    <Button Text="Clear app data"
+                        Clicked="ClearAppData"
+                        FontSize="20"
+                        FontFamily="LibreBaskervilleRegular"
+                        TextColor="White"
+                        BackgroundColor="Transparent"/>
+                </Grid>
+                <Grid HorizontalOptions="Center">
+                    <Image Source="button_pressed.jpg" 
+                        Aspect="Center"/>
+                    <Button Text="Check cards"
+                        Clicked="CardsPageClicked"
+                        FontSize="20"
+                        FontFamily="LibreBaskervilleRegular"
+                        TextColor="White"
+                        BackgroundColor="Transparent"/>
+                </Grid>
+            </VerticalStackLayout>
+        </ScrollView>
         <Button 
             Clicked="GoBackMainPage"
             WidthRequest="50"

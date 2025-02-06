@@ -1,6 +1,5 @@
 ﻿using CommunityToolkit.Maui;
 using Microsoft.Extensions.Logging;
-using Services;
 
 namespace KingdomLegacyCompanion
 {

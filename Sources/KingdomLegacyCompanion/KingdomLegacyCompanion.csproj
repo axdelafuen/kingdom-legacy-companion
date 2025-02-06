@@ -21,7 +21,7 @@
 		<Nullable>enable</Nullable>
 
 		<!-- Display name -->
-		<ApplicationTitle>KingdomLegacyCompanion</ApplicationTitle>
+		<ApplicationTitle>Kingdom Legacy Companion</ApplicationTitle>
 
 		<!-- App Identifier -->
 		<ApplicationId>fr.axdelafuen.kingdomlegacycompanion</ApplicationId>
@@ -86,6 +86,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="Pages\CardsPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Pages\GamePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

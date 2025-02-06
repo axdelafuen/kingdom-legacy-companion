@@ -51,6 +51,24 @@
                         TextColor="White"
                         BackgroundColor="Transparent"/>
             </Grid>
+            <BoxView Color="Transparent" HeightRequest="1" />
+            <Label FontSize="16"
+                   TextColor="White"
+                   VerticalOptions="EndAndExpand"
+                   FontFamily="LibreBaskervilleRegular">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span FontFamily="LibreBaskervilleRegular" Text="Official website: " />
+                        <Span FontFamily="LibreBaskervilleRegular" Text="Kingdom Legacy"
+                  TextColor="White"
+                  TextDecorations="Underline">
+                            <Span.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding OpenWebsiteCommand}" />
+                            </Span.GestureRecognizers>
+                        </Span>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
         </VerticalStackLayout>
         <Button
             Clicked="GoToSettingsPage"

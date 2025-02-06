@@ -1,5 +1,6 @@
 ﻿using Model;
 using Services;
+using System.Windows.Input;
 
 namespace KingdomLegacyCompanion.Pages
 {
@@ -8,6 +9,7 @@ namespace KingdomLegacyCompanion.Pages
         public MainPage()
         {
             InitializeComponent();
+            BindingContext = this;
         }
 
         private async void NewGameClicked(object sender, EventArgs e)
@@ -50,5 +52,10 @@ namespace KingdomLegacyCompanion.Pages
 
             await Navigation.PushAsync(new SettingsPage());
         }
+
+        public ICommand OpenWebsiteCommand => new Command(() =>
+        {
+            Launcher.OpenAsync("https://www.kingdomlegacygame.com/");
+        });
     }
 }

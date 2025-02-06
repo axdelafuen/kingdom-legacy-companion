@@ -9,7 +9,7 @@ public partial class ScorePage : ContentPage
     {
         InitializeComponent();
         _games = games;
-        foreach (var game in _games.Where(g => g.IsEnded == true))
+        foreach (var game in _games.Where(g => g.IsEnded == true).OrderByDescending(g => g.Score))
         {
             var label = new Label
             {

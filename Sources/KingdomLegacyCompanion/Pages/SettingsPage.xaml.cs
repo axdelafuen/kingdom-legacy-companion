@@ -21,4 +21,17 @@ public partial class SettingsPage : ContentPage
             await DataManager.Instance.ResetDataAsync();
         }
     }
+
+    private async void CardsPageClicked(object sender, EventArgs e)
+    {
+        if (Connectivity.Current.NetworkAccess == NetworkAccess.Internet)
+        {
+            if (Navigation.NavigationStack.Any(page => page is CardsPage))
+                return;
+
+            await Navigation.PushAsync(new CardsPage());
+        }
+        else
+            await DisplayAlert("No internet !", "This feature requires internet connection, try again later.", "OK");
+    }
 }
