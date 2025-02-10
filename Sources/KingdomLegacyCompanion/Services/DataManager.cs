@@ -15,7 +15,6 @@ namespace Services
         private DataManager()
         {
             LoadDataAsync();
-            CheckIdConsistency();
         }
 
         public async void AddGame(Game game)
@@ -29,6 +28,7 @@ namespace Services
             Games.Remove(game);
             await SaveDataAsync();
         }
+
         public async Task ResetDataAsync()
         {
             Games = [];
@@ -36,16 +36,12 @@ namespace Services
             Game.RestoreUniqueId(0);
         }
 
-        private void CheckIdConsistency()
+        private void RestoreIdConsistency()
         {
-            int maxId = -1;
-            foreach (var game in Games)
-            {
-                if (game.Id > maxId)
-                    maxId = game.Id;
-            }
-            Game.RestoreUniqueId(maxId + 1);
+            if (Games.Count()>0)
+                Game.RestoreUniqueId(Games.Max(g => g.Id)+1);
         }
+
         public async Task SaveDataAsync()
         {
             try
@@ -67,6 +63,7 @@ namespace Services
                 {
                     string json = await File.ReadAllTextAsync(FilePath);
                     Games = JsonSerializer.Deserialize<List<Game>>(json) ?? new();
+                    RestoreIdConsistency();
                 }
             }
             catch (Exception ex)

@@ -102,4 +102,14 @@ public partial class GamePage : ContentPage
             await Navigation.PopToRootAsync();
         }
     }
+
+    private async void DeleteThisGame(object sender, EventArgs e)
+    {
+        bool response = await DisplayAlert("Delete this kingdom !", "Are you sure you want to delete this kingdom ?", "OK", "Cancel");
+        if (response)
+        {
+            DataManager.Instance.RemoveGame(_currentGame);
+            await Navigation.PopToRootAsync();
+        }
+    }
 }
