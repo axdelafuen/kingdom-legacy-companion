@@ -14,17 +14,17 @@ namespace KingdomLegacyCompanion.Pages
 
         private async void NewGameClicked(object sender, EventArgs e)
         {
+            if (Navigation.NavigationStack.Any(page => page is GamePage))
+                return;
+
             string response = await DisplayPromptAsync("Start a new adventure !", "What's the name of your kingdom?", "OK", "Cancel", placeholder: "Kingdom#"+Game.UniqueId);
             
             if (response == null)
                 return;
             if (response != "")
-                DataManager.Instance.Games.Add(new Game(response));
+                DataManager.Instance.AddGame(new Game(response));
             else
-                DataManager.Instance.Games.Add(new Game(null));
-
-            if (Navigation.NavigationStack.Any(page => page is GamePage))
-                return;
+                DataManager.Instance.AddGame(new Game(null));
             
             await Navigation.PushAsync(new GamePage(DataManager.Instance.Games.Last()));
         }

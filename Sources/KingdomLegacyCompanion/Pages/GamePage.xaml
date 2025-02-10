@@ -263,5 +263,27 @@
                          />
             </Button.ImageSource>
         </Button>
+
+        <Button 
+            Clicked="DeleteThisGame"
+            WidthRequest="50"
+            HeightRequest="50"
+            CornerRadius="25"
+            BackgroundColor="Transparent"
+            FontSize="25"
+            FontAttributes="Bold"
+            BorderColor="White"
+            BorderWidth="2"
+            HorizontalOptions="End"
+            VerticalOptions="Start"
+            Margin="10"
+        >
+                    <Button.ImageSource>
+                        <FontImageSource FontFamily="FluentIcons"
+                         Glyph="&#xe74d;"
+                         Color="White"
+                         />
+                    </Button.ImageSource>
+                </Button>
     </Grid>
 </ContentPage>

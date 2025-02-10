@@ -5,7 +5,7 @@ namespace Model
     public class Game : INotifyPropertyChanged
     {
         private static int _uniqueId = 0;
-        private readonly int _id;
+        private int _id;
         private string _name;
         private Resource _gold;
         private Resource _wood;
@@ -35,14 +35,14 @@ namespace Model
 
         public int Id 
         { 
-            get { return _id; } 
+            get { return _id; }
+            set { _id = value;  }
         }
-
         public static int UniqueId
         {
             get { return _uniqueId; }
+            set { _uniqueId = value; }
         }
-
         public string Name 
         {
             get { return _name; }
@@ -73,7 +73,7 @@ namespace Model
             get { return _sword.Value; }
             set { _sword.Value = value; OnPropertyChanged(nameof(Sword)); }
         }
-        public int TradeGoods 
+        public int TradeGoods
         {
             get { return _tradegoods.Value; }
             set { _tradegoods.Value = value; OnPropertyChanged(nameof(TradeGoods)); }
@@ -95,7 +95,7 @@ namespace Model
         {
             _uniqueId = value;
         }
-
+        
         protected void OnPropertyChanged(string propertyName) =>
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
     }
