@@ -39,6 +39,26 @@
                         TextColor="White"
                         BackgroundColor="Transparent"/>
                 </Grid>
+                <Grid HorizontalOptions="Center">
+                    <Image Source="button_pressed.jpg" 
+                        Aspect="Center"/>
+                    <Button Text="Export data"
+                        Clicked="ExportData"
+                        FontSize="20"
+                        FontFamily="LibreBaskervilleRegular"
+                        TextColor="White"
+                        BackgroundColor="Transparent"/>
+                </Grid>
+                <Grid HorizontalOptions="Center">
+                    <Image Source="button_pressed.jpg" 
+                        Aspect="Center"/>
+                    <Button Text="Import data"
+                        Clicked="ImportData"
+                        FontSize="20"
+                        FontFamily="LibreBaskervilleRegular"
+                        TextColor="White"
+                        BackgroundColor="Transparent"/>
+                </Grid>
             </VerticalStackLayout>
         </ScrollView>
         <Button 

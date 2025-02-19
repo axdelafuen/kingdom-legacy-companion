@@ -1,12 +1,14 @@
 ﻿using System.Text.Json;
+using CommunityToolkit.Maui.Storage;
 using Model;
 
 namespace Services
 {
     public class DataManager
     {
+        private static readonly string FileName = "kingdom-legacy-companion-data.json";
         private static DataManager _instance;
-        private static readonly string FilePath = Path.Combine(FileSystem.AppDataDirectory, "gameData.json");
+        private static readonly string FilePath = Path.Combine(FileSystem.AppDataDirectory, FileName);
 
         public List<Game> Games { get; private set; } = new();
 
@@ -71,6 +73,34 @@ namespace Services
                 Console.WriteLine($"Error loading data: {ex.Message}");
                 Games = new();
             }
+        }
+
+        public async Task ImportDataAsync()
+        {
+            var result = await FilePicker.PickAsync(new PickOptions
+            {
+                PickerTitle = "Select yout kingdom-legacy-companion Json data.",
+            });
+
+            if (result != null)
+            {
+                using var stream = await result.OpenReadAsync();
+                using var reader = new StreamReader(stream);
+                string json = await reader.ReadToEndAsync();
+
+                Games = JsonSerializer.Deserialize<List<Game>>(json) ?? Games;
+            }
+        }
+
+        public async Task ExportDataAsync()
+        {
+            if (!File.Exists(FilePath))
+                throw new FileNotFoundException();
+            
+            await Share.Default.RequestAsync(new ShareFileRequest
+            {
+                File = new ShareFile(FilePath)
+            });
         }
     }
 }
