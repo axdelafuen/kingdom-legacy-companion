@@ -34,4 +34,21 @@ public partial class SettingsPage : ContentPage
         else
             await DisplayAlert("No internet !", "This feature requires internet connection, try again later.", "OK");
     }
+
+    private async void ExportData(object sender, EventArgs e)
+    {
+        try
+        {
+            await DataManager.Instance.ExportDataAsync();
+        }
+        catch(Exception)
+        {
+            await DisplayAlert("No data found !", "You need at least one game started to get your data.", "OK");
+        }
+    }
+
+    private async void ImportData(object sender, EventArgs e)
+    {
+        await DataManager.Instance.ImportDataAsync();
+    }
 }
