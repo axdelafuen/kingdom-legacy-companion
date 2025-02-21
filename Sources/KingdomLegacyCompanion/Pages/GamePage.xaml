@@ -19,8 +19,24 @@
                 TextColor="White"/>
             <BoxView Color="Transparent" HeightRequest="10" />
             <!--GOLD-->
-            <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+            <Grid RowSpacing="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
                 <Button 
+                    Grid.Row="0"
+                    Grid.Column="0"
                     AutomationId="gold"
                     Text="—"
                     Clicked="SubValueToResource"
@@ -33,11 +49,28 @@
                     FontAttributes="Bold"
                     BorderColor="Black"
                     BorderWidth="2"
+                    VerticalOptions="Center"
+                    HorizontalOptions="End"/>
+                <Label
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    Text="{Binding Gold}" 
+                    FontSize="30"
                     HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    FontFamily="LibreBaskervilleRegular" 
+                    TextColor="White"/>
+                <Image
+                    Grid.Row="0"
+                    Grid.Column="2"
+                    Source="money.png" 
+                    WidthRequest="45" 
+                    HeightRequest="45"
+                    HorizontalOptions="Start"
                     VerticalOptions="Center"/>
-                <Label  Text="{Binding Gold}" FontSize="30" VerticalOptions="Center" FontFamily="LibreBaskervilleRegular" TextColor="White"/>
-                <Image Source="money.png" WidthRequest="45" HeightRequest="45"/>
                 <Button 
+                    Grid.Row="0"
+                    Grid.Column="3"
                     AutomationId="gold"
                     Text="+"
                     Clicked="AddValueToResource"
@@ -50,12 +83,12 @@
                     FontAttributes="Bold"
                     BorderColor="Black"
                     BorderWidth="2"
-                    HorizontalOptions="Center"
+                    HorizontalOptions="Start"
                     VerticalOptions="Center"/>
-            </HorizontalStackLayout>
-            <!--WOOD-->
-            <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+                <!--WOOD-->
                 <Button 
+                    Grid.Row="1"
+                    Grid.Column="0"
                     AutomationId="wood"
                     Text="—"
                     Clicked="SubValueToResource"
@@ -68,11 +101,28 @@
                     FontAttributes="Bold"
                     BorderColor="Black"
                     BorderWidth="2"
+                    HorizontalOptions="End"
+                    VerticalOptions="Center"/>
+                <Label
+                    Grid.Row="1"
+                    Grid.Column="1" 
+                    Text="{Binding Wood}" 
+                    FontSize="30" 
+                    VerticalOptions="Center"
                     HorizontalOptions="Center"
-                    VerticalOptions="Center"/>  
-                <Label  Text="{Binding Wood}" FontSize="30" VerticalOptions="Center" FontFamily="LibreBaskervilleRegular" TextColor="White"/>
-                <Image Source="wood.png" WidthRequest="45" HeightRequest="45"/>
+                    FontFamily="LibreBaskervilleRegular" 
+                    TextColor="White"/>
+                <Image 
+                    Grid.Row="1"
+                    Grid.Column="2" 
+                    Source="wood.png" 
+                    WidthRequest="45" 
+                    HeightRequest="45"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Start"/>
                 <Button 
+                    Grid.Row="1"
+                    Grid.Column="3" 
                     AutomationId="wood"
                     Text="+"
                     Clicked="AddValueToResource"
@@ -85,12 +135,12 @@
                     FontAttributes="Bold"
                     BorderColor="Black"
                     BorderWidth="2"
-                    HorizontalOptions="Center"
+                    HorizontalOptions="Start"
                     VerticalOptions="Center"/>
-            </HorizontalStackLayout>
-            <!--STONE-->
-            <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+                <!--STONE-->
                 <Button 
+                    Grid.Row="2"
+                    Grid.Column="0" 
                     AutomationId="stone"
                     Text="—"
                     Clicked="SubValueToResource"
@@ -103,11 +153,28 @@
                     FontAttributes="Bold"
                     BorderColor="Black"
                     BorderWidth="2"
-                    HorizontalOptions="Center"
+                    HorizontalOptions="End"
                     VerticalOptions="Center"/>
-                <Label  Text="{Binding Stone}" FontSize="30" VerticalOptions="Center" FontFamily="LibreBaskervilleRegular" TextColor="White"/>
-                <Image Source="stone.png" WidthRequest="45" HeightRequest="45"/>
+                <Label 
+                    Grid.Row="2"
+                    Grid.Column="1"
+                    Text="{Binding Stone}" 
+                    FontSize="30" 
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Center"
+                    FontFamily="LibreBaskervilleRegular" 
+                    TextColor="White"/>
+                <Image 
+                    Grid.Row="2"
+                    Grid.Column="2"
+                    Source="stone.png" 
+                    WidthRequest="45" 
+                    HeightRequest="45"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Start"/>
                 <Button 
+                    Grid.Row="2"
+                    Grid.Column="3"
                     AutomationId="stone"
                     Text="+"
                     Clicked="AddValueToResource"
@@ -120,12 +187,12 @@
                     FontAttributes="Bold"
                     BorderColor="Black"
                     BorderWidth="2"
-                    HorizontalOptions="Center"
+                    HorizontalOptions="Start"
                     VerticalOptions="Center"/>
-            </HorizontalStackLayout>
-            <!--STEEL-->
-            <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+                <!--STEEL-->
                 <Button 
+                    Grid.Row="3"
+                    Grid.Column="0"
                     AutomationId="steel"
                     Text="—"
                     Clicked="SubValueToResource"
@@ -138,11 +205,28 @@
                     FontAttributes="Bold"
                     BorderColor="Black"
                     BorderWidth="2"
-                    HorizontalOptions="Center"
+                    HorizontalOptions="End"
                     VerticalOptions="Center"/>
-                <Label  Text="{Binding Steel}" FontSize="30" VerticalOptions="Center" FontFamily="LibreBaskervilleRegular" TextColor="White"/>
-                <Image Source="steel.png" WidthRequest="45" HeightRequest="45"/>
+                <Label 
+                    Grid.Row="3"
+                    Grid.Column="1"
+                    Text="{Binding Steel}" 
+                    FontSize="30" 
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Center"
+                    FontFamily="LibreBaskervilleRegular" 
+                    TextColor="White"/>
+                <Image 
+                    Grid.Row="3"
+                    Grid.Column="2"
+                    Source="steel.png" 
+                    WidthRequest="45" 
+                    HeightRequest="45"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Start"/>
                 <Button 
+                    Grid.Row="3"
+                    Grid.Column="3"
                     AutomationId="steel"
                     Text="+"
                     Clicked="AddValueToResource"
@@ -155,12 +239,12 @@
                     FontAttributes="Bold"
                     BorderColor="Black"
                     BorderWidth="2"
-                    HorizontalOptions="Center"
+                    HorizontalOptions="Start"
                     VerticalOptions="Center"/>
-            </HorizontalStackLayout>
-            <!--SWORD-->
-            <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+                <!--SWORD-->
                 <Button 
+                    Grid.Row="4"
+                    Grid.Column="0"
                     AutomationId="sword"
                     Text="—"
                     Clicked="SubValueToResource"
@@ -173,11 +257,28 @@
                     FontAttributes="Bold"
                     BorderColor="Black"
                     BorderWidth="2"
-                    HorizontalOptions="Center"
+                    HorizontalOptions="End"
                     VerticalOptions="Center"/>
-                <Label  Text="{Binding Sword}" FontSize="30" VerticalOptions="Center" FontFamily="LibreBaskervilleRegular" TextColor="White"/>
-                <Image Source="sword.png" WidthRequest="45" HeightRequest="45"/>
+                <Label
+                    Grid.Row="4"
+                    Grid.Column="1"
+                    Text="{Binding Sword}" 
+                    FontSize="30" 
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Center"
+                    FontFamily="LibreBaskervilleRegular" 
+                    TextColor="White"/>
+                <Image 
+                    Grid.Row="4"
+                    Grid.Column="2"
+                    Source="sword.png" 
+                    WidthRequest="45" 
+                    HeightRequest="45"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Start"/>
                 <Button 
+                    Grid.Row="4"
+                    Grid.Column="3"
                     AutomationId="sword"
                     Text="+"
                     Clicked="AddValueToResource"
@@ -190,12 +291,12 @@
                     FontAttributes="Bold"
                     BorderColor="Black"
                     BorderWidth="2"
-                    HorizontalOptions="Center"
+                    HorizontalOptions="Start"
                     VerticalOptions="Center"/>
-            </HorizontalStackLayout>
-            <!--TRADEGOODS-->
-            <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+                <!--TRADEGOODS-->
                 <Button 
+                    Grid.Row="5"
+                    Grid.Column="0"
                     AutomationId="tradegoods"
                     Text="—"
                     Clicked="SubValueToResource"
@@ -208,11 +309,28 @@
                     FontAttributes="Bold"
                     BorderColor="Black"
                     BorderWidth="2"
-                    HorizontalOptions="Center"
+                    HorizontalOptions="End"
                     VerticalOptions="Center"/>
-                <Label  Text="{Binding TradeGoods}" FontSize="30" VerticalOptions="Center" FontFamily="LibreBaskervilleRegular" TextColor="White"/>
-                <Image Source="tradegoods.png" WidthRequest="45" HeightRequest="45"/>
+                <Label 
+                    Grid.Row="5"
+                    Grid.Column="1"
+                    Text="{Binding TradeGoods}" 
+                    FontSize="30" 
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Center"
+                    FontFamily="LibreBaskervilleRegular" 
+                    TextColor="White"/>
+                <Image 
+                    Grid.Row="5"
+                    Grid.Column="2"
+                    Source="tradegoods.png" 
+                    WidthRequest="45" 
+                    HeightRequest="45"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Start"/>
                 <Button 
+                    Grid.Row="5"
+                    Grid.Column="3"
                     AutomationId="tradegoods"
                     Text="+"
                     Clicked="AddValueToResource"
@@ -225,10 +343,10 @@
                     FontAttributes="Bold"
                     BorderColor="Black"
                     BorderWidth="2"
-                    HorizontalOptions="Center"
+                    HorizontalOptions="Start"
                     VerticalOptions="Center"/>
-            </HorizontalStackLayout>
-
+            </Grid>
+            <!--END GAME BUTTON-->
             <BoxView Color="Transparent" HeightRequest="30" />
             <Grid HorizontalOptions="Center">
                 <Image Source="button.jpg" 
@@ -263,7 +381,6 @@
                          />
             </Button.ImageSource>
         </Button>
-
         <Button 
             Clicked="DeleteThisGame"
             WidthRequest="50"
